@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta name="author" content="Claus Rinner">
+  <meta name="Description"
+ content="EDBS/ATKIS-Format und Reader by Claus Rinner">
+  <meta name="KeyWords"
+ content="Claus Rinner, GIS, SIG, Internet Mapping, Java, ArcView, Avenue, VRML, EDBS, ATKIS, ALK">
+  <title>Claus Rinner - EDBS / ATKIS - Format und Reader</title>
+</head>
+<body>
+<h3>
+EDBS / ATKIS</h3>
+This page is about the german topographic data transfer standard
+EDBS/ATKIS
+and a reader for this format. Owing to the specific nature of this data
+format, the following information is exclusively available in German.
+This
+holds as well for the comments inside the source code of the GPL'ed
+reader
+software.
+<p><b>Das Datenformat</b>
+</p>
+<p>EDBS ist die Einheitliche Datenbankschnittstelle, ein Transferformat
+f&uuml;r Daten des ATKIS, des Amtlichen Topographisch-Kartographischen
+Informationssystems der Arbeitsgemeinschaft der Vermessungsverwaltungen
+der L&auml;nder der Bundesrepublik Deutschland (AdV). EDBS wird auch
+zur
+&Uuml;bertragung von ALK-Daten verwendet, das ist das Amtliche
+Liegenschaftskataster.
+</p>
+<p>EDBS ist ein lesbares Textformat; hier zwei Zeilen aus einer
+(fiktiven)
+EDBS-Datei:
+</p>
+<p><tt>EDBS00950000FEIN100005..0000ULOBNN..0001000134571.6.8315945981040000000010001104310201LA999525L1921111.0000</tt>
+</p>
+<p><tt>EDBS01520000FEIN100009..0000ULOBNN..0001000134571.6.85833452929200001000134571.6.87612751101915000100011043102A999525
+.......001...0.0000000134571.6.8644905115080000</tt>
+</p>
+<p>Darin finden sich u.a. folgende Informationen:
+</p>
+<ul>
+  <li>Objektnummer A999525</li>
+  <li>Objektteilnummer 1</li>
+  <li>Objektart 3102 (= Weg)</li>
+  <li>Folie 104</li>
+  <li>Objekttyp L(inie)</li>
+  <li>Labelpunkt (3418315.94,5765981.04)</li>
+  <li>Entstehungsdatum 11.11.1992 sowie Anfangspunkt
+(3418583.34,5765292.92)</li>
+  <li>Zwischenpunkt (3418644.90,5765115.08)</li>
+  <li>Endpunkt (3418761.27,5765110.19)</li>
+</ul>
+Eine ausf&uuml;hrliche Beschreibung des Datenformats findet sich bei <a
+ href="http://www.gismngt.de/format/edbs1.htm">http://www.gis-management.de/</a>.
+<br>
+Weitere Informationen &uuml;ber ATKIS sind unter <a
+ href="http://www.atkis.de">http.//www.atkis.de</a>
+und bei der <a href="http://www.adv-online.de">AdV</a> zu finden.
+<br>
+&nbsp;
+<p><b>Der ATKIS-Reader EDBS_extra</b>
+</p>
+<p>Im Zeitraum von Februar bis Juni 1994 habe ich am <a
+ href="http://www.usf.uni-osnabrueck.de">Institut
+f&uuml;r Umweltsystemforschung</a> der Universit&auml;t Osnabr&uuml;ck
+den ATKIS-Arc/Info-Konverter "EDBS_arc" geschrieben, den ich bis Juni
+1995
+unter der Bezeichnung "EDBS_extra" weiterentwickelt habe.
+</p>
+<p>Die Idee zu EDBS_arc ist w&auml;hrend der Planung f&uuml;r ein
+Projekt
+zur Nitratbelastung privater Trinkwasserbrunnen im Landkreis
+Osnabr&uuml;ck
+entstanden. Die vom Landkreis Osnabr&uuml;ck zur Verf&uuml;gung
+gestellten
+ATKIS-Daten sollten in ein Fachinformationssystem unter Arc/Info
+integriert
+werden, die Mittel der Universit&auml;t erlaubten jedoch nicht die
+Anschaffung
+eines kommerziellen Konverters. Daher wurde die Entwicklung einer
+Behelfsl&ouml;sung
+als studentisches Projekt ("Entwicklung einer EDBS-Schnittstelle
+f&uuml;r
+Arc/Info") ausgeschrieben.
+</p>
+<p>EDBS_extra ist ein ANSI-C-Programm, das EDBS-Auftr&auml;ge mit
+ATKIS-Daten
+abarbeitet, und die darin enthaltenen Geometrie-, Topologie- und
+Sachinformationen
+'lesbar' abspeichert, wobei die Geometriedaten f&uuml;r den Import mit
+der Funktion GENERATE von Arc/Info vorbereitet sind. Durch Anwendung
+von
+UNIX-Shell-Skripten und Batchdateien k&ouml;nnen die konvertierten
+EDBS-Daten
+in Arc/Info eingelesen oder anderweitig genutzt werden.
+</p>
+<p>Die <u>Kurzbeschreibung</u> zum ATKIS-Reader einschlie&szlig;lich
+Erl&auml;uterungen
+zum EDBS/ATKIS-Format gibt es hier in <a href="extra-doku.ps">Postscript</a>
+(231 kB),
+<a href="extra-doku.pdf">PDF</a> (194 kB) oder <a href="extra-doku.dvi">DVI</a>
+(84 kB).
+</p>
+<p>Das <u>Programm und einige Skripte</u> steht als
+Open-Source-Software
+<a href="download.htm">hier
+zum Download</a> zur Verf&uuml;gung stehen.
+</p>
+<p>ACHTUNG: Email, die mir an die Adresse claus@rinners.de geschickt wurde, habe ich NICHT erhalten. Bitte benutzen Sie meine Kontaktinformation auf meiner <a href="http://www.ryerson.ca/~crinner/">akademischen Homepage</a>. 
+<p>Updated 15.12.2007
+
+</body>
+</html>

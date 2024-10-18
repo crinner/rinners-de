@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta name="Author" content="Claus Rinner">
+  <meta name="Description"
+ content="EDBS/ATKIS-Reader EDBS_extra by Claus Rinner">
+  <title>Claus Rinner - EDBS_extra - Download</title>
+</head>
+<body>
+<h3>
+<b>EDBS_extra</b></h3>
+Reader f&uuml;r ATKIS-Daten im Format der Einheitlichen
+Datenbankschnittstelle
+der AdV.
+<p><b>Copyright, Gew&auml;hrleistung</b>
+</p>
+<p>EDBS_extra ist freie Software. Sie k&ouml;nnen sie unter den
+Bedingungen
+der GNU General Public License, wie von der Free Software Foundation
+herausgegeben,
+weitergeben und/oder modifizieren, entweder unter Version 2 der Lizenz
+oder (wenn Sie es w&uuml;nschen) jeder sp&auml;teren Version.
+</p>
+<p>Die Ver&ouml;ffentlichung dieses Programms erfolgt in der Hoffnung,
+da&szlig; es Ihnen von Nutzen sein wird, aber OHNE JEDE
+GEW&Auml;HRLEISTUNG
+- sogar ohne die implizite Gew&auml;hrleistung der MARKTREIFE oder der
+EIGNUNG F&Uuml;R EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU
+General Public License.
+</p>
+<p>Sie erhalten eine Kopie der GNU General Public License zusammen mit
+diesem Programm oder schreiben Sie an die Free Software Foundation,
+Inc.,
+675 Mass Ave, Cambridge, MA 02139, USA. Sie finden die Lizenz auch
+unter
+<a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>
+und eine inoffizielle deutsche &Uuml;bersetzung unter <a
+ href="http://www.GNU.de/gpl-ger.html">http://www.GNU.de/gpl-ger.html</a>.
+<br>
+&nbsp;
+</p>
+<p><b>Download</b>
+</p>
+<p>Die <u>Quelldateien und einige Skripte</u> sind in einer ZIP-Datei
+komprimiert
+und stehen <a href="EDBS_extra.zip">hier</a> zum Download bereit
+(46kB).
+Zu dem Paket geh&ouml;ren neben den *.h und *.c Dateien ein makefile
+sowie
+Skripte zur Automatisierung der Konvertierung.
+<br>
+&nbsp;
+</p>
+<p><b>Installation, Start</b>
+</p>
+<p>Nach dem Entpacken m&uuml;ssen Sie zun&auml;chst die
+ausf&uuml;hrbaren
+Dateien <tt>edx</tt> und <tt>dom</tt> f&uuml;r Ihr Betriebssystem
+erstellen,
+am besten durch Benutzung des beigef&uuml;gten <tt>makefile</tt>. Die
+Kompilierung
+und Ausf&uuml;hrung der aktuellen Version ist von mir zuletzt
+ausschlie&szlig;lich
+unter dem UNIX-Emulator <a href="http://www.cygwin.com/">Cygwin</a>
+(einem
+Port der GNU Entwicklungswerkzeuge f&uuml;r Windows-Systeme) getestet
+worden.
+</p>
+<p>Erstellen Sie in dem Verzeichnis, in dem Sie die Konvertierung
+vornehmen
+wollen, die Unterverzeichnisse <tt>edx_files</tt> und <tt>dom_files</tt>.
+Starten Sie das Lesen der EDBS-Quelldatei mit <tt>./edx.exe &lt;
+atkis.bsp
+&gt; /dev/null</tt>. Sortieren Sie die gelesenen Linienz&uuml;ge nach
+Objekt-IDs
+mit <tt>sort -o edx_files/edx_linien_sorted edx_files/edx_linien</tt>.
+Verketten Sie schlie&szlig;lich die Linienz&uuml;ge der Objekte mit <tt>./dom.exe
+&lt; edx_files/edx_linien_sorted</tt>. Siehe auch Datei readme.txt.
+</p>
+<p>Weitere Informationen, speziell zum Import nach Arc/Info, finden
+sich
+in der <u>Kurzbeschreibung</u> (<a href="extra-doku.ps">Postscript</a>
+(231 kB),
+<a href="extra-doku.pdf">PDF</a> (194 kB) oder <a href="extra-doku.dvi">DVI</a>
+(84 kB)).
+<br>
+&nbsp;
+</p>
+<p><b>Import von EDBS-Daten nach GRASS</b>
+</p>
+<p>EDBS_extra wurde von Otto Dassau (nach Vorarbeit von Markus Neteler)
+genutzt, um EDBS-Daten nach GRASS zu importieren (Link nicht mehr verf&uuml;gbar).
+Eine Anleitung findet sich auch im FreeGIS Tutorial unter <a
+ href="http://www.freegis.org/">http://www.freegis.org/</a>.
+<br>
+&nbsp;
+</p>
+<p><b>Bekannte Probleme, Verbesserung des Tools</b>
+</p>
+<p>Sie k&ouml;nnen mir unter der unten angegebenen Email-Adresse
+mitteilen,
+f&uuml;r welche Zwecke Sie EDBS_extra nutzen, wie sie das Tool
+ver&auml;ndert
+haben und welche Fehler Sie bemerkt und ggf. behoben haben.
+Verbesserungen
+des Tools werde ich in unregelm&auml;&szlig;igen Abst&auml;nden auf
+diesen
+Web-Seiten ver&ouml;ffentlichen.
+</p>
+<p>Das Tool wurde zuletzt mit folgenden Datens&auml;tzen getestet:
+</p>
+<ul>
+  <li>ATKIS-Daten des Landkreises Osnabr&uuml;ck (von ca. 1995)</li>
+  <li>Testdaten Bad Nenndorf und Umgebung (Datei 3622.edb), <a
+ href="http://www.lgn.de/produkte/dlm25/">http://www.lgn.de/produkte/dlm25/</a></li>
+  <li>Musterdatei ATKIS im EDBS-Format (Datei atkis.bsp), <a
+ href="http://www.schleswig-holstein.de/lverma/lverma_down.html">http://www.schleswig-holstein.de/lverma/lverma_down.html</a></li>
+  <li>EDBS-Testdaten (FEIN) DLM 25 BW (Datei dlm_25bw.edb.txt), <a
+ href="http://www.lv-bw.de/">http://www.lv-bw.de/</a>
+... (Cookies erforderlich)</li>
+</ul>
+Der Reader beherrscht zur Zeit auschlie&szlig;lich die folgenden
+Auftragsarten:
+<ul>
+  <li>BSPE, ULOBNN&nbsp;&nbsp; -&gt; OBJEKTDATEN</li>
+  <li>FEIN, ULOBNN&nbsp;&nbsp; -&gt; OBJEKTDATEN</li>
+  <li>BSPE, ULTANN&nbsp;&nbsp; -&gt; ATTRIBUTE</li>
+  <li>FEIN, ULTANN&nbsp;&nbsp; -&gt; ATTRIBUTE</li>
+  <li>BINF, ULOTEX&nbsp;&nbsp; -&gt; AUFTRAGSKENNDATEN</li>
+  <li>OTEX, ULOTEX&nbsp;&nbsp; -&gt; AUFTRAGSTEXTDATEN</li>
+  <li>BKRT, IBENKRT&nbsp; -&gt; GEBIETSKENNZEICHNUNG</li>
+  <li>AKND, ULQA0000 -&gt; AUFTRAGSKENNSATZ</li>
+  <li>AEND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-&gt;
+AUFTRAGSENDE</li>
+</ul>
+Erweiterungen k&ouml;nnen relativ einfach in der Funktion
+vgl_satzinfo()
+in edbs.c eingebaut werden.
+<p>Bekannte Probleme und denkbare Verbesserungen sind:
+</p>
+<ul>
+  <li>Daten aus verschiedenen Gau&szlig;-Kr&uuml;ger-Meridianstreifen
+k&ouml;nnen
+nicht zusammen verarbeitet werden</li>
+  <li>Es gibt einen Absturz beim Verarbeiten des ersten EDBS-Satzes
+('segmentation
+fault'), wenn die Unterverzeichnisse 'edx_files' und 'dom_files' nicht
+existieren.</li>
+  <li>Die Zuordnung der Codes zu Operationsschl&uuml;ssel und Name der
+Information
+sollte in einer erweiterbaren Konfigurationsdatei den Auftragsarten
+zugeordnet
+werden (vgl. oben, Liste der derzeit bekannten Auftragsarten).</li>
+  <li>Z.Zt. k&ouml;nnen keine Objektarten von der Konvertierung
+ausgenommen
+oder
+andere Filter f&uuml;r die zu konvertierenden Objekte eingerichtet
+werden;
+dies sollte ebenfalls durch eine Konfigurationsdatei erm&ouml;glicht
+werden.</li>
+  <li>L&auml;nderspezifisch bekommen gleiche Objekte teilweise
+unterschiedliche
+Objektarten, mit denen Inselpolygone gekennzeichnet werden; das Tool
+meldet
+dies als Fehler.</li>
+  <li>Die Geometrie-Arten 41, ... (noch zu testen) werden nicht
+umgesetzt.</li>
+  <li>Die Datenelemente "Pr&uuml;fzeichen", "Aktualit&auml;t des
+Objekts",
+"Modelltyp",
+"Entstehungsdatum", "Ver&auml;nderungskennung", "Kartentyp",
+"Signaturteilnummer",
+"Linienteilung", "... Fachparameter" (vgl. Kurzbeschreibung) werden
+nicht
+ausgewertet.</li>
+  <li>Zuk&uuml;nftig sollte die ATKIS-Fach-ID f&uuml;r die
+Kennzeichnung der
+gelesenen Objekte benutzt werden anstatt der speziell f&uuml;r den
+Arc/Info-Import
+berechneten numerischen ID.</li>
+  <li>...</li>
+  <li>...</li>
+</ul>
+<p>ACHTUNG: Email, die mir an die Adresse claus@rinners.de geschickt wurde, habe ich NICHT erhalten. Bitte benutzen Sie meine Kontaktinformation auf meiner <a href="http://www.ryerson.ca/~crinner/">akademischen Homepage</a>. 
+<p>Updated 15.12.2007
+
+</body>
+</html>
